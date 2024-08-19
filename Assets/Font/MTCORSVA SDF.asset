@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: MTCORSVA SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 2098117426
   material: {fileID: 7785157391125664077}
-  materialHashCode: 0
+  materialHashCode: -2014470702
   m_Version: 1.1.0
   m_SourceFontFileGUID: 83bac968e501e914cae51dd33a1e5136
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 83bac968e501e914cae51dd33a1e5136, type: 3}
@@ -2767,7 +2767,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - BEVEL_ON
+  - GLOW_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -2826,12 +2828,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.5
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

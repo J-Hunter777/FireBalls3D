@@ -507,9 +507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb818bcfd00ab97478d83bc28345d33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scaleTo: {x: 1.2, y: 1.2, z: 1.2}
-  _duration: 0.7
-  _ease: 30
+  _tweenData:
+    EndValue: {x: 1.2, y: 1.2, z: 1.2}
+    Duration: 0.7
+    Ease: 31
 --- !u!4 &693277602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7135442579298515744, guid: 97382696fe6dd3c4e8cbafb46b7a1101, type: 3}

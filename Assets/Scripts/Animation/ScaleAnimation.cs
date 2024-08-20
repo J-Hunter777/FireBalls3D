@@ -1,24 +1,24 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 using System;
+using Assets.Scripts.TweenStructures;
 
 namespace Assets.Scripts.Animation
 {
     public class ScaleAnimation : MonoBehaviour
     {
-        [SerializeField] private Vector3 _scaleTo;
-        [SerializeField][Min(0.0f)] private float _duration;
-        [SerializeField] private Ease _ease;
+        [SerializeField] private Vector3TweenData _tweenData;
+        
 
         private void Start() 
         {
-            ApplayAnimation();
+            ApplayAnimation(_tweenData);
         }
 
-        private void ApplayAnimation() =>
+        private void ApplayAnimation(Vector3TweenData tweenData) =>
             transform
-                    .DOScale(_scaleTo, _duration)
-                    .SetEase(_ease)
+                    .DOScale(tweenData.EndValue, tweenData.Duration)
+                    .SetEase(tweenData.Ease)
                     .SetLoops(-1, LoopType.Yoyo);
 
 

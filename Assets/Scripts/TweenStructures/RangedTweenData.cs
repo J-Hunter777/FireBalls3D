@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Assets.Scripts.TweenStructures
 {
-    public class Vector3RangedTweenData : RangedTweenData<Vector3> { }
-	public class Vector2RangedTweenData : RangedTweenData<Vecror2> { }
-	publiccla RanhedTweenData<T> : TweenData <T>
+    public class Vector3RangedTweenData : RanhedTweenData<Vector3> { }
+	public class Vector2RangedTweenData : RanhedTweenData<Vector2> { }
+	public class RanhedTweenData<T> : TweenData <T>
 
 	{
-		pumlic T From;
+		public T From;
 	}
 }

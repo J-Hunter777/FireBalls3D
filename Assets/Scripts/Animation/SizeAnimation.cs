@@ -13,10 +13,8 @@ namespace Assets.Scripts.Animayion
         [SerializeField] private Vector3 _scaleTo;
         [SerializeField] [Min(0.0f)] private float _duration;
         [SerializeField] private AnimationCurve _scaleCurve;
-        private void Start()
-        {
+        private void Start() => 
             StartCoroutine(PlayLoopedScalingAnimation(transform, _scaleFrom, _scaleTo, _duration, _scaleCurve));
-        }
 
         private IEnumerator PlayLoopedScalingAnimation(Transform transformToAnimate, Vector3 from, Vector3 to, float duration, AnimationCurve scaleCurve)
         {

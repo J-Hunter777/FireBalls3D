@@ -509,30 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scaleTo: {x: 1.2, y: 1.2, z: 1.2}
   _duration: 0.7
-  _scaleCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  _ease: 30
 --- !u!4 &693277602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7135442579298515744, guid: 97382696fe6dd3c4e8cbafb46b7a1101, type: 3}

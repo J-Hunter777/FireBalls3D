@@ -8,7 +8,7 @@ namespace Assets.Scripts.Animation
     {
         [SerializeField] private Vector3 _scaleTo;
         [SerializeField][Min(0.0f)] private float _duration;
-        [SerializeField] private AnimationCurve _scaleCurve;
+        [SerializeField] private Ease _ease;
 
         private void Start() 
         {
@@ -18,7 +18,7 @@ namespace Assets.Scripts.Animation
         private void ApplayAnimation() =>
             transform
                     .DOScale(_scaleTo, _duration)
-                    .SetEase(_scaleCurve)
+                    .SetEase(_ease)
                     .SetLoops(-1, LoopType.Yoyo);
 
 

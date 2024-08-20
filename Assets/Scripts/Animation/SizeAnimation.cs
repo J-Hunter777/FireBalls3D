@@ -4,7 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.Animayion
+namespace Assets.Scripts.Animation
 {
    
     public class SizeAnimayion : MonoBehaviour 

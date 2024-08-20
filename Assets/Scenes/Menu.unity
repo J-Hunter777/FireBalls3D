@@ -504,10 +504,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 681319523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012a7164cfb693a49b6e645f943699b7, type: 3}
+  m_Script: {fileID: 11500000, guid: fb818bcfd00ab97478d83bc28345d33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scaleFrom: {x: 1, y: 1, z: 1}
   _scaleTo: {x: 1.2, y: 1.2, z: 1.2}
   _duration: 0.7
   _scaleCurve:

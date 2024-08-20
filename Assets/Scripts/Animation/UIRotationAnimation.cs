@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.Animayion
+namespace Assets.Scripts.Animation
 {
 	public class UIRotationAnimation : MonoBehaviour
 	{

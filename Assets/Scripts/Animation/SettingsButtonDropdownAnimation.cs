@@ -13,12 +13,11 @@ namespace Animation
 
         private RectTransform[] _buttonTransforms;
         private bool _active;
-        private RectTransform _buttonTransform;
+        
 
         private void Start()
         {
-            _buttonTransform = actionRoot.GetComponentInChildren<RectTransform>();
-            _buttonTransforms = new RectTransform[] { _buttonTransform };
+            _buttonTransforms = actionRoot.GetComponentInChildren<RectTransform>();
             TweenButtonSize(_active, buttonsTweenData);
         }
 

@@ -15,9 +15,9 @@ namespace Animation
         private bool _active;
         
 
-        private void Start()
+        private void Start(RectTransform[] buttonTransforms)
         {
-            _buttonTransforms = actionRoot.GetComponentInChildren<RectTransform>();
+            buttonTransforms = actionRoot.GetComponentsInChildren<RectTransform>();
             TweenButtonSize(_active, buttonsTweenData);
         }
 

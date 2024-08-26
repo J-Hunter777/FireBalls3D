@@ -27,8 +27,12 @@ namespace StateMashine.States
             _image.sprite = _icon;
             _audioSource.PlayOneShot(_clickSound);
             _audioSource.mute = false;
+            OnStateEnter();
         }
 
-       
+        protected virtual void OnStateEnter()
+        {
+            
+        }
     }
 }

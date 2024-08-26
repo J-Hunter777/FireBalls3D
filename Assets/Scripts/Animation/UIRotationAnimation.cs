@@ -1,18 +1,16 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.Animation
+namespace Animation
 {
 	public class UIRotationAnimation : MonoBehaviour
 	{
-        [SerializeField] private float _speed;
+        [SerializeField] private float speed;
         private void Update() => 
-            Rotate(_speed);
+            Rotate(speed);
 
-        private void Rotate(float speed)
+        private void Rotate(float speed1)
         {
-            float angle = speed * Time.deltaTime;
+            float angle = speed1 * Time.deltaTime;
             transform.Rotate(Vector3.forward, angle);
         }
     }

@@ -1,10 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Assets.Scripts.Animation
+namespace Animation
 {
    
     public class SizeAnimayion : MonoBehaviour 

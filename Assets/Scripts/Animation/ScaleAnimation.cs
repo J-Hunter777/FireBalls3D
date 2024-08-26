@@ -1,9 +1,8 @@
-﻿using DG.Tweening;
+﻿using Assets.Scripts.TweenStructures;
+using DG.Tweening;
 using UnityEngine;
-using System;
-using Assets.Scripts.TweenStructures;
 
-namespace Assets.Scripts.Animation
+namespace Animation
 {
     public class ScaleAnimation : MonoBehaviour
     {

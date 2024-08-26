@@ -1,4 +1,6 @@
-﻿namespace StateMashine.States
+﻿using UnityEngine.Audio;
+
+namespace StateMashine.States
 {
     public class EnableVolumeButtonState : ConfigureVolumeButtonState
     {

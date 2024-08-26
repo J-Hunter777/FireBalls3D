@@ -1,7 +1,7 @@
-﻿using DG.Tweening;
+﻿using Assets.Scripts.TweenStructures;
 using UnityEngine;
 
-namespace Assets.Scripts.TweenStructures
+namespace TweenStructures
 {
     [System.Serializable]
     public class Vector3RangedTweenData : RanhedTweenData<Vector3> { }

@@ -10,7 +10,9 @@ namespace StateMashine.States
         [SerializeField] private AudioMixer audioMixer;
         protected abstract float VolumeLevel { get; }
 
-        protected override void OnStateEnter() => 
+        protected override void OnStateEnter()
+        {
             audioMixer.SetFloat(volumeExposedParameter, VolumeLevel);
+        }
     }
 }

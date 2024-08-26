@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.TweenStructures;
 using DG.Tweening;
+using TweenStructures;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,9 +16,9 @@ namespace Animation
         private bool _active;
         
 
-        private void Start(RectTransform[] buttonTransforms)
+        private void Start()
         {
-            buttonTransforms = actionRoot.GetComponentsInChildren<RectTransform>();
+            _buttonTransforms = actionRoot.GetComponentInChildren<RectTransform[]>();
             TweenButtonSize(_active, buttonsTweenData);
         }
 

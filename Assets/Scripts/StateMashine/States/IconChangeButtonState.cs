@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using StateMashine;
 using UnityEngine.UI;
 
 namespace StateMashine.States
@@ -8,8 +10,8 @@ namespace StateMashine.States
     public abstract class IconChangeButtonState : MonoState
     
     {
-        [SerializeField] private Sprite icon;
-        [SerializeField] private AudioClip clickSound;
+        [SerializeField] private Sprite _icon;
+        [SerializeField] private AudioClip _clickSound;
         private Image _image;
         private AudioSource _audioSource;
 
@@ -18,13 +20,12 @@ namespace StateMashine.States
             _image = GetComponent<Image>();
             _audioSource = GetComponent<AudioSource>();
             _audioSource.mute = true;
-            
         }
 
         public override void Enter()
         {
-            _image.sprite = icon;
-            _audioSource.PlayOneShot(clickSound);
+            _image.sprite = _icon;
+            _audioSource.PlayOneShot(_clickSound);
             _audioSource.mute = false;
             OnStateEnter();
         }

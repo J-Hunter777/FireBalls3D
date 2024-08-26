@@ -5,7 +5,7 @@ namespace StateMashine.States
 {
     public class ButtonStateMashine : MonoBehaviour
     {
-        [SerializeField] private MonoState[] states = Array.Empty<MonoState>();
+        [SerializeField] private MonoState[] _states = Array.Empty<MonoState>();
 
         private int _currentStateIndex;
 
@@ -14,20 +14,20 @@ namespace StateMashine.States
         public void ChangeOnNextState()
         {
             _currentStateIndex = GetNextStateIndex(_currentStateIndex);
-            states[_currentStateIndex].Enter();
+            _states[_currentStateIndex].Enter();
         }
 
         private void Initialize()
         {
-            if (states.Length == 0)
+            if (_states.Length == 0)
             {
                 throw new InvalidOperationException(("States should be initialized"));
                 enabled = false;
             }
             _currentStateIndex = 0;
-            states[_currentStateIndex].Enter();
+            _states[_currentStateIndex].Enter();
         }
 
-        private int GetNextStateIndex(int currentIndex) => (currentIndex + 1) % states.Length;
+        private int GetNextStateIndex(int currentIndex) => (currentIndex + 1) % _states.Length;
     }
 }

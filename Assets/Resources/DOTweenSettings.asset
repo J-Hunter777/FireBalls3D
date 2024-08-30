@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 16995157, guid: f6df5fab0e95d6948a08cc7f63294ecc, type: 3}
+  m_Script: {fileID: 16995157, guid: 4912589bf53340942a1d3f088292b5ac, type: 3}
   m_Name: DOTweenSettings
   m_EditorClassIdentifier: 
   useSafeMode: 1

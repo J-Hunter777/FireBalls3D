@@ -2,16 +2,17 @@
 using DG.Tweening;
 using UnityEngine;
 
+
 namespace Animation
 {
     public class ScaleAnimation : MonoBehaviour
     {
-        [SerializeField] private Vector3TweenData _tweenData;
+        [SerializeField] private Vector3TweenData tweenData;
         
 
         private void Start() 
         {
-            ApplayAnimation(_tweenData);
+            ApplayAnimation(tweenData);
         }
 
         private void ApplayAnimation(Vector3TweenData tweenData) =>
@@ -21,5 +22,5 @@ namespace Animation
                     .SetLoops(-1, LoopType.Yoyo);
 
 
-    }
+    }   
 }

@@ -8,43 +8,48 @@ using System.Threading.Tasks;
 namespace TowerGeneration
 {
     [CreateAssetMenu(fileName = "TowerFactory", menuName = "ScriptableObjects/Tower/Factory")]
-    public sealed class TowerFactorySo : ScriptableObject, IAsyncTowerFactory
+    public class TowerFactorySo : ScriptableObject, IAsyncTowerFactory
 
     {
-        [SerializeField] private TowerSegment segmentPrefab;
-        
-        [Space]
+        [SerializeField] private TowerSegment towerSegments;
+
+        [Space] 
         [SerializeField] [Min(0)] private int segmentCount;
-        [SerializeField] [Min(0)] private float spawnTimePerSegment;
+        [SerializeField] [Min(0.0f)] private float spawnTimePerSegment;
 
-        [Space] [SerializeField] private Material[] materials = Array.Empty<Material>();
-        private IAsyncTowerFactory _asyncTowerFactoryImplementation;
-
+        [Space] 
+        [SerializeField] private Material[] materials = Array.Empty<Material>();
+        
         private int spawnTimePerSegmentMilliseconds => (int)(spawnTimePerSegment * 1000);
         
-        public async Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken)
+        public async Task<Tower> CreatAsync(Transform tower, CancellationToken cancellationToken)
         {
             Vector3 position = tower.position;
             var segments = new Queue<TowerSegment>(segmentCount);
+            
             for (int i = 0; i < segmentCount; i++)
             {
                 if (cancellationToken.IsCancellationRequested)
                     break;
+                
                 TowerSegment segment = CreateSegment(tower, position, i);
                 segments.Enqueue(segment);
+                
                 position = GetNextPositionAfter(segment.transform, position);
+                
                 await Task.Delay(spawnTimePerSegmentMilliseconds, cancellationToken);
             }
 
             return new Tower(segments);
         }
+        
         private TowerSegment CreateSegment(Transform tower, Vector3 position, int numberOfInstance)
         {
-            TowerSegment segment = Instantiate(segmentPrefab, position, tower.rotation, tower);
+            TowerSegment segment = Instantiate(towerSegments, position, tower.rotation, tower);
+            
             Material material = GetSegmentMaterialBy(numberOfInstance);
             segment.SetMaterial(material);
             return segment;
-            
         }
 
         private Vector3 GetNextPositionAfter(Transform segment, Vector3 currentPosition)
@@ -59,14 +64,8 @@ namespace TowerGeneration
             return materials[index];
         }
 
-        public Task<Tower> CreatAsync(Transform tower, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public Task CreatAsync(Transform tower)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

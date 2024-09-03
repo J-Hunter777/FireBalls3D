@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 299166420084226457}
   - component: {fileID: 4948322796240712878}
   - component: {fileID: 1559159160725150050}
-  - component: {fileID: 7542393876257308347}
+  - component: {fileID: 5642952897131592758}
   m_Layer: 0
   m_Name: 16SideCylinderSegment
   m_TagString: Untagged
@@ -1441,11 +1441,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &7542393876257308347
-MeshFilter:
+--- !u!114 &5642952897131592758
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7737569440592103582}
-  m_Mesh: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f242c80155c41f6aac8f2a1eb9cdeb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

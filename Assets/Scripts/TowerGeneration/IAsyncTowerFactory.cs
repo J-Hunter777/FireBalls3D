@@ -6,7 +6,6 @@ namespace TowerGeneration
 {
     public interface IAsyncTowerFactory
     {
-        Task<Tower> CreatAsync(Transform tower, CancellationToken cancellationToken);
-        Task CreatAsync(Transform tower);
+        Task<Tower> CreatAsync(Transform tower, CancellationToken cancellationToken); 
     }
 }

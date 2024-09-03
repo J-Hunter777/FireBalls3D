@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 
 namespace TowerGeneration
 {
@@ -6,6 +7,8 @@ namespace TowerGeneration
     {
         public void SetMaterial(Material material) =>
             GetComponent<MeshRenderer>().sharedMaterial = material;
+
+       
     }
 
 }

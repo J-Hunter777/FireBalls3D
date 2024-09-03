@@ -8,7 +8,8 @@ namespace TowerGeneration
         private readonly Queue<TowerSegment> _segments;
 
         public Tower(IEnumerable<TowerSegment> segments) : this(new Queue<TowerSegment>(segments)) { }
-        private Tower(Queue<TowerSegment> segments)
+        
+        public Tower(Queue<TowerSegment> segments)
         {
             _segments = segments;
         }

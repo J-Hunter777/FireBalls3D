@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading;
+using Assets.Scripts.TweenStructures;
+using DG.Tweening;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 namespace TowerGeneration
@@ -8,8 +10,13 @@ namespace TowerGeneration
     {
         [SerializeField] private UnityObject towerFactory;
         [SerializeField] private Transform tower;
+        [SerializeField] private Vector3TweenData rotationData;
+        
+        
         private IAsyncTowerFactory TowerFactory => (IAsyncTowerFactory) towerFactory;
+        
         private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        
         private void OnValidate()
         {
             if (towerFactory is not null && towerFactory is IAsyncTowerFactory == false)
@@ -19,15 +26,23 @@ namespace TowerGeneration
             }
         }
 
-        private void OnDisable()
-        {
+        private void OnDisable() =>
             _cancellationTokenSource.Cancel();
-        }
+        
 
         [ContextMenu(nameof(Generate))]
+        
         public async void Generate()
         {
-            await TowerFactory.CreatAsync(tower);
+            ApplayRotation(rotationData);
+            await TowerFactory.CreatAsync(tower, _cancellationTokenSource.Token);
+        }
+
+        private void ApplayRotation(Vector3TweenData rotationData)
+        {
+            tower
+                .DOBlendableLocalRotateBy(new Vector3(0, 360, 0), 1f, RotateMode.FastBeyond360)
+                .SetEase(rotationData.Ease);
         }
     }
 }

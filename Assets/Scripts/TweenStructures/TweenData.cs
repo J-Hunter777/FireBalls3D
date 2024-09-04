@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace Assets.Scripts.TweenStructures
+namespace TweenStructures
 {
     [System.Serializable]
     public class Vector3TweenData : TweenData<Vector3> { }

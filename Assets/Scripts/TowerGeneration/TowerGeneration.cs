@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
-using Assets.Scripts.TweenStructures;
 using DG.Tweening;
+using TweenStructures;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 namespace TowerGeneration

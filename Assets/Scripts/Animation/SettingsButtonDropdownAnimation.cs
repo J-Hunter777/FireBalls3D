@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.TweenStructures;
-using DG.Tweening;
+﻿using DG.Tweening;
 using TweenStructures;
 using UnityEngine;
 using UnityEngine.Serialization;

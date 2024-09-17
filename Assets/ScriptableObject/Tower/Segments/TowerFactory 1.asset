@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04ac01ee76184ee8beb662899557683f, type: 3}
-  m_Name: TowerFactory
+  m_Name: TowerFactory 1
   m_EditorClassIdentifier: 
-  towerSegments: {fileID: 5642952897131592758, guid: 04a4d92ef6b86a8458e892fe00fcf1f1, type: 3}
+  towerSegments: {fileID: -316794358333521174, guid: 7b69256d98396f840984fdcac1063e16, type: 3}
   segmentCount: 15
-  spawnTimePerSegment: 0.1
+  spawnTimePerSegment: 0.2
   materials:
   - {fileID: 2100000, guid: 3614ca8216ae931498c4f6398db307fd, type: 2}
   - {fileID: 2100000, guid: 78968cbfea16de44aa3e7b5d4a30f9b6, type: 2}

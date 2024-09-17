@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7663352444656615164}
   - component: {fileID: 7773119537950165371}
   - component: {fileID: 2253741751555226660}
-  - component: {fileID: 3673543473064819622}
   - component: {fileID: -316794358333521174}
   m_Layer: 0
   m_Name: StarSegment
@@ -442,14 +441,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &3673543473064819622
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2521631801582485505}
-  m_Mesh: {fileID: 0}
 --- !u!114 &-316794358333521174
 MonoBehaviour:
   m_ObjectHideFlags: 0

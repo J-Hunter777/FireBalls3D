@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using TweenStructures;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,7 +18,7 @@ namespace Animation
 
         private void Start()
         {
-            _buttonTransforms = actionRoot.GetComponentInChildren<RectTransform[]>();
+            _buttonTransforms = actionRoot.GetComponentsInChildren<RectTransform>();
             TweenButtonSize(_active, buttonsTweenData);
         }
 
@@ -28,7 +29,7 @@ namespace Animation
         }
         private void TweenButtonSize(bool active, Vector2RangedTweenData tweenData)
         {
-            float delay = 0.0f;
+            float delay = 0.1f;
 
             foreach (RectTransform buttonTransform in _buttonTransforms)
             {

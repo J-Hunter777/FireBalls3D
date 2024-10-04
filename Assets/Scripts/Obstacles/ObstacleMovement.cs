@@ -13,6 +13,8 @@ namespace Obstacles
         [SerializeField] private FloatRange _changeSpeedDuration;
         [SerializeField] private FloatRange _speed;
         [SerializeField] private AnimationCurve _changeSpeedCurve;
+        
+        [ContextMenu(nameof(Start))]
        
         private void Start()
         {

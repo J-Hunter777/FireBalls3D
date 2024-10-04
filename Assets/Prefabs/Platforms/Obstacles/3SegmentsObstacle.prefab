@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2243221485704026440}
   - component: {fileID: 1607162438932695731}
-  - component: {fileID: 1152473956092617252}
   - component: {fileID: 369781185812570940}
   - component: {fileID: 8948023803902866208}
   m_Layer: 0
@@ -489,49 +488,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 2767
   m_IsSelectable: 1
-  m_SelectedFaces: 0d000000
-  m_SelectedEdges:
-  - a: 52
-    b: 53
-  - a: 53
-    b: 54
-  - a: 54
-    b: 55
-  - a: 55
-    b: 52
-  m_SelectedVertices: 36000000340000003500000037000000
---- !u!114 &1152473956092617252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8909891435539938624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca002da428252441b92f28d83c8a65f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Shape:
-    rid: 702302433262436367
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
-  m_PivotLocation: 0
-  m_PivotPosition: {x: 0, y: 0, z: 0}
-  m_UnmodifiedMeshVersion: 2753
-  m_ShapeBox:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
-  references:
-    version: 2
-    RefIds:
-    - rid: 702302433262436367
-      type: {class: Pipe, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
-      data:
-        m_Thickness: 0.05
-        m_NumberOfSides: 16
-        m_HeightCuts: 0
-        m_Smooth: 1
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &369781185812570940
 MeshRenderer:
   m_ObjectHideFlags: 0
